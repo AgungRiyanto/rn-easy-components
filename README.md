@@ -7,7 +7,7 @@ rn-easy-components is package for simple/easy custom component react-native
 visit this package at [npmjs](https://www.npmjs.com/package/rn-easy-components) to install/show the doc.
 
 ```bash
-npm i rn-easy-components
+npm i rn-easy-components --save
 ```
 
 ## Usage
