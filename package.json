@@ -1,0 +1,17 @@
+{
+  "name": "rn-easy-components",
+  "version": "1.0.1-beta.0",
+  "description": "easy custom component for react-native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "easy",
+    "react-native custom-loading",
+    "react-native custom-component",
+    "react-native"
+  ],
+  "author": "agung reeyanto (https://agungriyanto.github.io)",
+  "license": "MIT"
+}
