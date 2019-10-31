@@ -13,9 +13,40 @@ npm i rn-easy-components --save
 ## Usage
 
 ```python
-import { Button } from 'rn-easy-component';
+import React from 'react';
+import {
+    Text
+} from 'react-native';
+import { Container, Button, SweetAlert } from 'rn-easy-components';
+class MyApp extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            visible: false
+        }
+    }
 
-<Button>{ children }</Button>
+    render() {
+        return (
+            <Container style={{ justifyContent: 'center' }}>
+                <SweetAlert 
+                    type="danger" # danger|info|warning
+                    visible={this.state.visible} # true|false -> value for hide/show
+                    title="Warning!"
+                    textDescription="Entah apa yang merasukimu"
+                    onCancel={() => this.setState({ visible: false }) } # remove this line for hide cancel button
+                    onConfirm={() => this.setState({ visible: false }) }
+
+                /> 
+                <Button style={{ alignSelf: 'center' }} onPress={() => this.setState({ visible: true }) }>
+                    <Text style={{ color: 'white' }}>button</Text>
+                </Button> 
+            </Container>
+        );
+    }
+}
+
+export default MyApp;
 ```
 
 ## Contributing

@@ -4,6 +4,7 @@ import {
     View, 
     StyleSheet 
 } from 'react-native';
+import { Colors } from './constants';
 
 const Button = props => {
     return (
@@ -12,9 +13,10 @@ const Button = props => {
             background={TouchableNativeFeedback.Ripple('#f4f4f4', false)}
         >
             <View style={[
-                styles.container, // default style
+                styles.default, // default style
                 props.style, // income style
-                props.rounded ? styles.rounded:false // for set rounded button
+                props.rounded ? styles.rounded:false, // for set rounded button
+                props.color ? { backgroundColor: props.color }:false 
             ]}>
                 { props.children }
             </View>
@@ -25,10 +27,13 @@ const Button = props => {
 export default Button;
 
 const styles = StyleSheet.create({
-    container: {
-        padding: 10,
-        alignItems: 'center',
-        backgroundColor: 'grey',
+    default: {
+        paddingHorizontal: 15,
+        paddingVertical: 10,
+        width: '100%',
+        alignSelf: 'flex-start',
+        backgroundColor: Colors.default,
+        borderRadius: 3,
         height: undefined,
         width: undefined
     },
