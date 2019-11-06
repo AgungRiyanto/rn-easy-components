@@ -10,6 +10,12 @@ visit this package at [npmjs](https://www.npmjs.com/package/rn-easy-components) 
 npm i rn-easy-components --save
 ```
 
+## Components
+Markup :    * Container
+            * Button
+            * SweetAlert
+            * Loader
+
 ## Usage
 
 ```python
@@ -17,7 +23,12 @@ import React from 'react';
 import {
     Text
 } from 'react-native';
-import { Container, Button, SweetAlert } from 'rn-easy-components';
+import { 
+    Container, 
+    Button, 
+    SweetAlert,
+    Loader 
+    } from 'rn-easy-components';
 class MyApp extends React.Component {
     constructor() {
         super();
@@ -29,6 +40,7 @@ class MyApp extends React.Component {
     render() {
         return (
             <Container style={{ justifyContent: 'center' }}>
+                <Loader visible={true} color="white" backgroundColor="grey" text="Please wait.."/>
                 <SweetAlert 
                     type="danger" # danger|info|warning
                     visible={this.state.visible} # true|false -> value for hide/show
