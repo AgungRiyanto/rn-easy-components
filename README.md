@@ -11,10 +11,12 @@ npm i rn-easy-components --save
 ```
 
 ## Components
-Markup :    * Container
-            * Button
-            * SweetAlert
-            * Loader
+```javascript
+* Container
+* Button
+* SweetAlert
+* Loader
+```
 
 ## Usage
 
@@ -28,8 +30,10 @@ import {
     Button, 
     SweetAlert,
     Loader 
-    } from 'rn-easy-components';
+} from 'rn-easy-components';
+
 class MyApp extends React.Component {
+    
     constructor() {
         super();
         this.state = {
